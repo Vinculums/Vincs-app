@@ -2,10 +2,10 @@
 
 Public download host for **Vinc**, an offline-first knowledge tool for your desktop.
 
-- **Download:** https://vincs.app/download
-- **All releases:** https://github.com/Vinclums/Vincs-app/releases
-- **Website:** https://vincs.app
-- **Release notes:** https://vincs.app/release
+- **Download:** https://vincs.io/download
+- **All releases:** https://github.com/Vinculums/Vincs-app/releases
+- **Website:** https://vincs.io
+- **Release notes:** https://vincs.io/release
 
 This repository holds published installers only — macOS `.dmg`, Windows `.exe`,
 Linux `.AppImage` / `.deb`. Application source is maintained separately.

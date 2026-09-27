@@ -8,7 +8,7 @@
 <h1 align="center">Vinc</h1>
 
 <p align="center">
-  Meet a new system for knowledge. Connect meaning. Compose Agents.
+  A knowledge graph you share with AI. Connect meaning. Compose Agents.
 </p>
 
 <p align="center">

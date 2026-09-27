@@ -33,10 +33,7 @@ Vinc is a knowledge graph you and your AI assistants share. Bring in documents a
 - **You decide where it lives and what leaves.** The graph lives in your account by default. Local mode keeps it in a folder you pick, with no copy in the account. To share, select part of the graph and send it as a pack: only that part goes.
 
 <p align="center">
-  <picture>
-    <source media="(prefers-color-scheme: dark)" srcset="docs/images/hero-3d-dark.png">
-    <img alt="Vinc showing the public demo graph in 3D: five topics in five jewel colours, with the search card and the view card in the top bar" src="docs/images/hero-3d-light.png" width="900">
-  </picture>
+  <img alt="Vinc showing the public demo graph in 3D: five topics in five jewel colours, with the search card and the view card in the top bar" src="docs/images/hero-3d-dark.png" width="900">
 </p>
 <p align="center">
   <em>The public demo graph in 3D. Five topics (design, node, agent, mcp, dev) each take a jewel colour. Shape tells the kind: a sphere is a concept, a tetrahedron a document, an octahedron a bridge.</em>

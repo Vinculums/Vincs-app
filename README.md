@@ -26,7 +26,7 @@
   <a href="https://vincs.io/release">Release notes</a>
 </p>
 
-Vinc is a knowledge operating system for your desktop. Bring in documents and notes, see how concepts, decisions and records connect across four viewpoints, and let the AI assistants you already use read and write **the same graph** over MCP.
+Vinc is a knowledge graph you and your AI assistants share. Bring in documents and notes, see how concepts, decisions and records connect across four viewpoints, and let the assistants you already use read and write **the same graph** over MCP.
 
 - **One graph on every screen.** Once you sign in, the desktop app shows the graph in your account: the same one the web app shows, and the same one an assistant reaches at `mcp.vincs.io`. There is one copy, so there is nothing to sync.
 - **Answers quote your notes; nothing is generated.** Ask answers *What is X* and *Sources for X* with passages from your own documents, and every node lists the documents behind it. You can check each answer against the text it came from.

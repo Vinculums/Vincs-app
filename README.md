@@ -145,7 +145,7 @@ Step by step, per host: [vincs.io/docs/mcp](https://vincs.io/docs/mcp/).
 
 - **By default the graph lives in your account.** The desktop app sends each read and write to your account through its local engine. The key for this device is kept in the system keychain; where there is no keychain, it is kept in the app's own folder, where anything running as your user can read it.
 - **Local mode keeps it on this device.** The graph lives in a folder you pick and your account holds no copy. You still sign in. Vinc warns you if the folder is synced by a cloud drive or sits on a network drive, because a copy taken while Vinc is writing can break the graph.
-- **What was already on this device stays there.** If this device holds a graph from an earlier version, Vinc keeps opening it from this device. Turning local mode off moves every topic on the device to your account, after you confirm, and leaves the folder as it is.
+- **What was already on this device stays there.** If this device holds a graph from an earlier version, Vinc keeps opening it from this device. Turning local mode off offers two ways: **Move to my account and turn off** moves every topic on the device to your account, after you confirm, and **Switch without moving** shows your account graph and leaves this device's graph in its folder, untouched. Either way the folder stays as it is.
 - **Sharing is a pack you choose.** A pack carries only the part of the graph you selected.
 - The app ships no analytics or tracking library. It contacts GitHub Releases to check for updates.
 
@@ -159,7 +159,7 @@ Step by step, per host: [vincs.io/docs/mcp](https://vincs.io/docs/mcp/).
 
 **Does it work offline?** The first sign-in needs a network. In the default account mode the app needs to reach your account. Local mode reads the graph from a folder on this device.
 
-**A graph I made before signing in is not on the web.** It stayed on this device. To move it into your account, turn off local mode in Settings, Account · storage. Vinc asks before it moves anything.
+**A graph I made before signing in is not on the web.** It stayed on this device. To move it into your account, turn off local mode in Settings, Account · storage, and choose **Move to my account and turn off**. Vinc asks before it moves anything.
 
 **A large file will not import.** In account mode a single import has a size limit, and a PDF reaches it sooner than text. Vinc says so when a file is over it: split the file.
 

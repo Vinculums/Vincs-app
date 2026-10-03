@@ -45,7 +45,7 @@ Vinc is a knowledge graph you and your AI assistants share. Bring in documents a
 
 | | | |
 |---|---|---|
-| **macOS** | Apple silicon | [`Vinc-aarch64.dmg`](https://github.com/Vinculums/Vincs-app/releases/latest/download/Vinc-aarch64.dmg) |
+| **macOS** | Apple silicon, macOS 15 or later | [`Vinc-aarch64.dmg`](https://github.com/Vinculums/Vincs-app/releases/latest/download/Vinc-aarch64.dmg) |
 | **Windows** | x64 | [`Vinc-x64-setup.exe`](https://github.com/Vinculums/Vincs-app/releases/latest/download/Vinc-x64-setup.exe) |
 | **Linux** | AppImage | [`Vinc-amd64.AppImage`](https://github.com/Vinculums/Vincs-app/releases/latest/download/Vinc-amd64.AppImage) |
 | **Linux** | Debian, Ubuntu | [`Vinc-amd64.deb`](https://github.com/Vinculums/Vincs-app/releases/latest/download/Vinc-amd64.deb) |
@@ -98,11 +98,11 @@ From there the assistant can walk one hop at a time with `vinc_neighbors`, trace
 | Capability | What you get |
 |---|---|
 | **View, four viewpoints** | 3D, 2D, Timeline and Weave over the same graph. Nodes are glass, each topic wears its own jewel colour, and shape tells the kind. A time cursor limits View to what existed at a date, and Flow plays it forward. |
-| **Find and Ask** | Find looks up names and keywords (and ranks by meaning on the account graph). Ask answers *What is X* and *Sources for X* by quoting your documents. |
+| **Find and Ask** | Find looks up names and keywords (and ranks by meaning on the account graph). **Search inside documents**, under the Find results, reads the text of your documents and shows the passage that matched. Korean is indexed two characters at a time, so a word is found even with a particle attached. Ask answers *What is X* and *Sources for X* by quoting your documents. |
 | **Node detail** | For any node: its topic, links out and in, the documents behind it, and its properties. Edit properties in place as text, list, number, yes or no, or JSON. If the node changed after you started editing, Vinc does not save over it. |
 | **Add knowledge** | Drag in `.md`, `.txt`, `.rst` or `.pdf`, or write a node by hand as a concept, a record or a decision. |
 | **Packs** | Shift-drag to select an area, or start from a node, and share it as a `.vincpack`. Records and decisions travel with it. Import a pack, or double-click one, and it joins your graph. |
-| **Agent roles** | Roles are nodes in your graph, listed under **Agent** by team. A role's properties hold its mission and what it must never do, and **Work as this role** copies a prompt that hands the role to an assistant. |
+| **Agent roles** | Roles are nodes in your graph, listed under **Agent** by team. Press **+** above the list to make a new one. A role's properties hold its mission and what it must never do, and **Work as this role** copies a prompt that hands the role to an assistant. |
 | **Spaces** | Switch between your personal graph and a team's shared graph in Settings, Account · storage. Every screen follows the space you pick. |
 | **MCP** | Web assistants reach the graph in your account at `https://mcp.vincs.io/mcp`. Settings, AI connections shows it with a **Copy address** button. |
 | **Local mode** | Settings, Account · storage, **Keep the graph on this device**: the graph lives in a folder you pick and your account holds no copy. |
@@ -152,6 +152,8 @@ Step by step, per host: [vincs.io/docs/mcp](https://vincs.io/docs/mcp/).
 ## Troubleshooting
 
 **macOS or Windows will not open the app.** Vinc is not code-signed yet. Follow the steps under [Get started](#get-started), or the [download page](https://vincs.io/download).
+
+**Search or saving pauses right after an update.** The first launch after an update can rebuild the search index. A line at the top says so; it takes a minute or two, and it goes away when the index is ready.
 
 **The screens are empty after sign-in.** If a line at the top says Vinc can't reach your account, the graph is in the account and the screens stay empty until the connection is back: press **Try again**. On a new account the graph is simply empty: add a file.
 

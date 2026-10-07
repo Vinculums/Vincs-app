@@ -49,8 +49,9 @@ Vinc is a knowledge graph you and your AI assistants share. Bring in documents a
 | **Windows** | x64 | [`Vinc-x64-setup.exe`](https://github.com/Vinculums/Vincs-app/releases/latest/download/Vinc-x64-setup.exe) |
 | **Linux** | AppImage | [`Vinc-amd64.AppImage`](https://github.com/Vinculums/Vincs-app/releases/latest/download/Vinc-amd64.AppImage) |
 | **Linux** | Debian, Ubuntu | [`Vinc-amd64.deb`](https://github.com/Vinculums/Vincs-app/releases/latest/download/Vinc-amd64.deb) |
+| **Linux, terminal only** | servers and headless machines | [`Vinc-cli-linux-x86_64.tar.gz`](https://github.com/Vinculums/Vincs-app/releases/latest/download/Vinc-cli-linux-x86_64.tar.gz) |
 
-Fedora and openSUSE use the `.rpm`, and managed Windows installs use the `.msi`. Both are on the [releases page](https://github.com/Vinculums/Vincs-app/releases/latest).
+Fedora and openSUSE use the `.rpm`, and managed Windows installs use the `.msi`. Both are on the [releases page](https://github.com/Vinculums/Vincs-app/releases/latest). The terminal archive holds the `vinc` command alone; sign in with `VINC_API_KEY` as the [CLI docs](https://vincs.io/docs/cli/) describe. Every release lists its assets in `SHA256SUMS`, signed with minisign; the public key is published beside it.
 
 **2. Sign in.** The first screen is the sign-in: **Sign in with email**, or **Continue with Google**. Vinc opens your browser to sign in and approve this device, then shows your graph.
 

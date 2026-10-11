@@ -53,6 +53,8 @@ Vinc is a knowledge graph you and your AI assistants share. Bring in documents a
 
 Fedora and openSUSE use the `.rpm`, and managed Windows installs use the `.msi`. Both are on the [releases page](https://github.com/Vinculums/Vincs-app/releases/latest). The terminal archive holds the `vinc` command alone; sign in with `VINC_API_KEY` as the [CLI docs](https://vincs.io/docs/cli/) describe. Every release lists its assets in `SHA256SUMS`, signed with minisign; the public key is published beside it.
 
+**Corrected 0.9.7 build.** View has two layouts: **by centre**, with its original arrangement and 3D density control, and **time branches**, with each Topic at the centre of its branches. A saved **by order** or **relation branches** choice opens as **time branches**. If you already installed an earlier 0.9.7 build, download and install [the corrected 0.9.7](https://github.com/Vinculums/Vincs-app/releases/tag/v0.9.7) again. Apps on an earlier version can update normally.
+
 **2. Sign in.** The first screen is the sign-in: **Sign in with email**, or **Continue with Google**. Vinc opens your browser to sign in and approve this device, then shows your graph.
 
 **3. Add something.** Drag a document (`.md`, `.txt`, `.rst`, `.pdf`) or a pack (`.vincpack`, `.json`) onto the window, or start from a single note. Or connect an assistant ([Works with](#works-with)) and let it write into the graph.
@@ -98,7 +100,7 @@ From there the assistant can walk one hop at a time with `vinc_neighbors`, trace
 
 | Capability | What you get |
 |---|---|
-| **View, four viewpoints** | 3D, 2D, Timeline and Weave over the same graph. Nodes are glass, each topic wears its own jewel colour, and shape tells the kind. A time cursor limits View to what existed at a date, and Flow plays it forward. The Timeline takes a period: the last 7, 30 or 90 days, this year, or dates you pick. |
+| **View, four viewpoints** | 3D, 2D, Timeline and Weave over the same graph. In 2D and 3D, choose **by centre** or **time branches**; time branches place each Topic at the centre of its branches. Nodes are glass, each topic wears its own jewel colour, and shape tells the kind. A time cursor limits View to what existed at a date, and Flow plays it forward. The Timeline takes a period: the last 7, 30 or 90 days, this year, or dates you pick. |
 | **Find and Ask** | Find looks up names and keywords (and ranks by meaning on the account graph). **Search inside documents**, under the Find results, reads the text of your documents and shows the passage that matched. Korean is indexed two characters at a time, so a word is found even with a particle attached. Ask answers *What is X* and *Sources for X* by quoting your documents. |
 | **Node detail** | For any node: its topic, links out and in, the documents behind it, and its properties. Edit properties in place as text, list, number, yes or no, or JSON. If the node changed after you started editing, Vinc does not save over it. |
 | **Add knowledge** | Drag in `.md`, `.txt`, `.rst` or `.pdf`, or start a new document or node where you are: from the tree, the palette, a shortcut or a right-click. Type `[[` to link a node, and in View hold Alt (Option on a Mac) and drag from one node to another to connect them. |

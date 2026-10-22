@@ -108,7 +108,7 @@ From there the assistant can walk one hop at a time with `vinc_neighbors`, trace
 | Capability | What you get |
 |---|---|
 | **Documents first** | The first screen is a document home: every document, newest first, narrowed by topic or title, read and written in place. The sidebar holds Home, Agent and your topics with their documents, and folds to a strip of icons. |
-| **View, four viewpoints** | 3D, 2D, Timeline and Weave over the same graph, opened with the **Graph** button. It opens as time branches in 3D: each Topic grows one arm with its items left to right by date, and the topics wind around the main one. You can switch to **by centre** in the view card. Nodes are glass, each topic wears its own jewel colour, and shape tells the kind. A time cursor limits View to what existed at a date, and Flow plays it forward. The Timeline takes a period: the last 7, 30 or 90 days, this year, or dates you pick. |
+| **View, four viewpoints** | 3D, 2D, Timeline and Weave over the same graph, opened with the **Graph** button. It opens as time branches in 3D: each Topic grows one arm with its items left to right by date, and the other topics fill the space around the main one. You can switch to **by centre** in the view card. Nodes are glass, each topic wears its own jewel colour, and shape tells the kind. A time cursor limits View to what existed at a date, and Flow plays it forward. The Timeline takes a period: the last 7, 30 or 90 days, this year, or dates you pick. |
 | **Find and Ask** | Find looks up names and keywords (and ranks by meaning on the account graph). **Search inside documents**, under the Find results, reads the text of your documents and shows the passage that matched. Korean is indexed two characters at a time, so a word is found even with a particle attached. Ask answers *What is X* and *Sources for X* by quoting your documents. |
 | **Node detail** | For any node: its topic, links out and in, the documents behind it, and its properties. Edit properties in place as text, list, number, yes or no, or JSON. If the node changed after you started editing, Vinc does not save over it. |
 | **Add knowledge** | Drag in `.md`, `.txt`, `.rst` or `.pdf`, or start a new document or node where you are: **New document** and **Import files** on the document home, the tree, the palette, a shortcut or a right-click. Type `[[` to link a node, and in View hold Alt (Option on a Mac) and drag from one node to another to connect them. Import says where the files go (this device, your account or a team space) and which documents it adds, refreshes or leaves as they are. |
@@ -125,7 +125,7 @@ From there the assistant can walk one hop at a time with `vinc_neighbors`, trace
     <td width="50%"><img alt="The demo graph in 2D time branches" src="docs/images/view-2d.png"></td>
   </tr>
   <tr>
-    <td><em>3D: each topic grows an arm along time, earlier on the left, and the topics wind around the main one.</em></td>
+    <td><em>3D: each topic grows an arm along time, earlier on the left, and the other topics fill the space around it.</em></td>
     <td><em>2D: the same branches, flat. Each topic box reads left to right by date.</em></td>
   </tr>
   <tr>

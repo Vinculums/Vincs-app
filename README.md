@@ -33,10 +33,10 @@ Vinc is a knowledge graph you and your AI assistants share. Bring in documents a
 - **You decide where it lives and what leaves.** The graph lives in your account by default. Local mode keeps it in a folder you pick, with no copy in the account. To share, select part of the graph and send it as a pack: only that part goes.
 
 <p align="center">
-  <img alt="Vinc showing the public demo graph in 3D: five topics in five jewel colours, with the search card and the view card in the top bar" src="docs/images/hero-3d-dark.png" width="900">
+  <img alt="Vinc opening on the document home: documents newest first, topic chips and a title filter, with search and the Graph button at the top right" src="docs/images/home.png" width="900">
 </p>
 <p align="center">
-  <em>The public demo graph in 3D. Five topics (design, node, agent, mcp, dev) each take a jewel colour. Shape tells the kind: a sphere is a concept, a tetrahedron a document, an octahedron a bridge.</em>
+  <em>The document home, the first screen, on the demo graph. Every document, newest first, narrowed by topic or title. The sidebar holds Home, Agent and the topics; search and the Graph button sit at the top right.</em>
 </p>
 
 ## Get started
@@ -71,7 +71,7 @@ sha256sum --check --ignore-missing SHA256SUMS
 ## See it in action
 
 <p align="center">
-  <img alt="The Design token node opened in View: its card with Ask an assistant, and the Node detail pane with topic, links and attached records" src="docs/images/node-detail.png" width="900">
+  <img alt="The Design token node opened in View: its card with Ask an assistant, and the Node detail pane with its kind, topic, links and the documents it appears in" src="docs/images/node-detail.png" width="900">
 </p>
 
 Every node can be handed to an assistant as an address. Open a node in View (here, **Design token** from the demo graph), and in its card choose **Ask an assistant**, **Copy prompt**, **Explain this concept**. You get one line to paste into any assistant connected to Vinc:
@@ -108,10 +108,10 @@ From there the assistant can walk one hop at a time with `vinc_neighbors`, trace
 | Capability | What you get |
 |---|---|
 | **Documents first** | The first screen is a document home: every document, newest first, narrowed by topic or title, read and written in place. The sidebar holds Home, Agent and your topics with their documents, and folds to a strip of icons. |
-| **View, four viewpoints** | 3D, 2D, Timeline and Weave over the same graph, opened with the **Graph** button. It opens as time branches in 3D: each Topic grows one arm and its items run left to right by date. You can switch to **by centre** in the view card. Nodes are glass, each topic wears its own jewel colour, and shape tells the kind. A time cursor limits View to what existed at a date, and Flow plays it forward. The Timeline takes a period: the last 7, 30 or 90 days, this year, or dates you pick. |
+| **View, four viewpoints** | 3D, 2D, Timeline and Weave over the same graph, opened with the **Graph** button. It opens as time branches in 3D: each Topic grows one arm with its items left to right by date, and the topics wind around the main one. You can switch to **by centre** in the view card. Nodes are glass, each topic wears its own jewel colour, and shape tells the kind. A time cursor limits View to what existed at a date, and Flow plays it forward. The Timeline takes a period: the last 7, 30 or 90 days, this year, or dates you pick. |
 | **Find and Ask** | Find looks up names and keywords (and ranks by meaning on the account graph). **Search inside documents**, under the Find results, reads the text of your documents and shows the passage that matched. Korean is indexed two characters at a time, so a word is found even with a particle attached. Ask answers *What is X* and *Sources for X* by quoting your documents. |
 | **Node detail** | For any node: its topic, links out and in, the documents behind it, and its properties. Edit properties in place as text, list, number, yes or no, or JSON. If the node changed after you started editing, Vinc does not save over it. |
-| **Add knowledge** | Drag in `.md`, `.txt`, `.rst` or `.pdf`, or start a new document or node where you are: from the tree, the palette, a shortcut or a right-click. Type `[[` to link a node, and in View hold Alt (Option on a Mac) and drag from one node to another to connect them. Import says where the files go (this device, your account or a team space) and which documents it adds, refreshes or leaves as they are. |
+| **Add knowledge** | Drag in `.md`, `.txt`, `.rst` or `.pdf`, or start a new document or node where you are: **New document** and **Import files** on the document home, the tree, the palette, a shortcut or a right-click. Type `[[` to link a node, and in View hold Alt (Option on a Mac) and drag from one node to another to connect them. Import says where the files go (this device, your account or a team space) and which documents it adds, refreshes or leaves as they are. |
 | **Packs** | Shift-drag to select an area, or start from a node, and share it as a `.vincpack`. Records and decisions travel with it. Import a pack, or double-click one, and it joins your graph. |
 | **Agent roles** | Roles are nodes in your graph, listed under **Agent** by team. Press **+** above the list to make a new one; with no roles yet, the list offers **New Agent role**. A role's properties hold its mission and what it must never do, and **Work as this role** copies a prompt that hands the role to an assistant. An assistant can check its work against the role with `vinc_role_check`. |
 | **Spaces** | Switch between your personal graph and a team's shared graph in Settings, Account · storage. Every screen follows the space you pick. |
@@ -121,20 +121,28 @@ From there the assistant can walk one hop at a time with `vinc_neighbors`, trace
 
 <table>
   <tr>
-    <td width="50%"><img alt="The demo graph in 2D" src="docs/images/view-2d.png"></td>
-    <td width="50%"><img alt="The demo graph in Weave" src="docs/images/view-weave.png"></td>
+    <td width="50%"><img alt="The demo graph in 3D time branches" src="docs/images/view-3d.png"></td>
+    <td width="50%"><img alt="The demo graph in 2D time branches" src="docs/images/view-2d.png"></td>
   </tr>
   <tr>
-    <td><em>2D: the same graph, flat. Each topic gathers around its hub.</em></td>
+    <td><em>3D: each topic grows an arm along time, earlier on the left, and the topics wind around the main one.</em></td>
+    <td><em>2D: the same branches, flat. Each topic box reads left to right by date.</em></td>
+  </tr>
+  <tr>
+    <td><img alt="The demo graph in Weave" src="docs/images/view-weave.png"></td>
+    <td><img alt="Search with the query token and its results" src="docs/images/find-results.png"></td>
+  </tr>
+  <tr>
     <td><em>Weave: every node on the ring by topic, and only the links cross the middle.</em></td>
+    <td><em>Find: type <code>token</code> in the search pill and the matching nodes and documents come back with their topic. ≈ marks a match by meaning.</em></td>
   </tr>
   <tr>
-    <td><img alt="Find with the query token and its results" src="docs/images/find-results.png"></td>
     <td><img alt="The Agent list with CI Gate Runner open" src="docs/images/agent-list.png"></td>
+    <td><img alt="A document open on the document home, with its topic and node beside it" src="docs/images/doc-read.png"></td>
   </tr>
   <tr>
-    <td><em>Find: type <code>token</code> and the matching nodes come back with their topic. Enter opens the pick in View.</em></td>
     <td><em>Agent: roles grouped by team, with who each one works from and hands off to. CI Gate Runner carries its mission, team and tier as properties.</em></td>
+    <td><em>A document opens in place, with its topic and the node it became beside it. <strong>Show in graph</strong> jumps to that node.</em></td>
   </tr>
 </table>
 

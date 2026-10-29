@@ -15,7 +15,7 @@
   <a href="https://github.com/Vinculums/Vincs-app/releases/latest"><img alt="Latest release" src="https://img.shields.io/github/v/release/Vinculums/Vincs-app?label=latest&color=4A4F8C"></a>
   <a href="https://github.com/Vinculums/Vincs-app/releases"><img alt="Downloads" src="https://img.shields.io/github/downloads/Vinculums/Vincs-app/total?color=4A4F8C"></a>
   <a href="https://vincs.io/docs/"><img alt="Docs" src="https://img.shields.io/badge/docs-vincs.io-4A4F8C"></a>
-  <a href="LICENSE"><img alt="MIT" src="https://img.shields.io/badge/licence-MIT-4A4F8C"></a>
+  <a href="LICENSE"><img alt="FSL-1.1-ALv2" src="https://img.shields.io/badge/licence-FSL--1.1--ALv2-4A4F8C"></a>
 </p>
 
 <p align="center">
@@ -188,9 +188,11 @@ Step by step, per host: [vincs.io/docs/mcp](https://vincs.io/docs/mcp/).
 
 It hosts the published installers and nothing else. The application source is maintained privately; what ships here is the build.
 
+The installers are licensed under the Functional Source License (FSL-1.1-ALv2), in [LICENSE](LICENSE): you may use, modify and run Vinc for any purpose except offering it to others as a competing commercial product or service, and each version is also licensed under Apache-2.0 two years after its release. Releases published before 29 October 2026 were distributed under the MIT License and stay under it. The integration packages on PyPI are Apache-2.0. Details: [vincs.io/licensing](https://vincs.io/licensing/).
+
 - Report something broken or unsafe: [support@vincs.io](mailto:support@vincs.io) or [vincs.io/support](https://vincs.io/support)
 - What changed in each version: [vincs.io/release](https://vincs.io/release)
 
 <p align="center">
-  <sub>© 2026 Vinc · MIT Licence · <a href="https://vincs.io/privacy">Privacy</a> · <a href="https://vincs.io/terms">Terms</a></sub>
+  <sub>© 2026 Vinc · <a href="https://vincs.io/licensing/">Licensing</a> · <a href="https://vincs.io/privacy">Privacy</a> · <a href="https://vincs.io/terms">Terms</a></sub>
 </p>

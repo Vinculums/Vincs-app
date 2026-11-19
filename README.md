@@ -26,17 +26,17 @@
   <a href="https://vincs.io/release">Release notes</a>
 </p>
 
-Vinc is a knowledge graph you and your AI assistants share. Bring in documents and notes, see how concepts, decisions and records connect across four viewpoints, and let the assistants you already use read and write **the same graph** over MCP.
+Vinc is a knowledge graph you and your AI assistants share. Bring in documents and notes, see how concepts, decisions and records connect on one map, and let the assistants you already use read and write **the same graph** over MCP.
 
 - **One graph on every screen.** Once you sign in, the desktop app shows the graph in your account: the same one the web app shows, and the same one an assistant reaches at `mcp.vincs.io`. There is one copy, so there is nothing to sync.
 - **Answers quote your notes; nothing is generated.** Ask answers *What is X* and *Sources for X* with passages from your own documents, and every node lists the documents behind it. You can check each answer against the text it came from.
 - **You decide where it lives and what leaves.** The graph lives in your account by default. Local mode keeps it in a folder you pick, with no copy in the account. To share, select part of the graph and send it as a pack: only that part goes.
 
 <p align="center">
-  <img alt="Vinc opening on the document home: documents newest first, topic chips and a title filter, with search and the Graph button at the top right" src="docs/images/home.png" width="900">
+  <img alt="Vinc opening on the document home: the sidebar with Home, Agent, search and the topic tree, and the document list newest first under one toolbar for topic, title search and sort" src="docs/images/home.png" width="900">
 </p>
 <p align="center">
-  <em>The document home, the first screen, on the demo graph. Every document, newest first, narrowed by topic or title. The sidebar holds Home, Agent and the topics; search and the Graph button sit at the top right.</em>
+  <em>The document home, the first screen, on the demo graph. Every document, newest first, under one toolbar for topic, title search and sort. Search sits at the top of the sidebar, above the topic tree; Documents and Graph sit at the top right.</em>
 </p>
 
 ## Get started
@@ -62,7 +62,7 @@ sha256sum --check --ignore-missing SHA256SUMS
 
 `release-signing.pub` is the key the app's updater already trusts. For the terminal archive alone, its own `.sha256` works too: `sha256sum --check Vinc-cli-linux-x86_64.tar.gz.sha256`.
 
-**2. Sign in.** The first screen is the sign-in: **Sign in with email**, or **Continue with Google**. Vinc opens your browser to sign in and approve this device, then shows your documents, newest first. The **Graph** button at the top right opens the map. While it waits you can cancel, open the page again or copy its address.
+**2. Sign in.** The first screen is the sign-in: **Sign in with email**, or **Continue with Google**. Vinc opens your browser to sign in and approve this device, then shows your documents, newest first. **Graph**, at the top right beside **Documents**, opens the map. While it waits you can cancel, open the page again or copy its address.
 
 **3. Add something.** Drag a document (`.md`, `.txt`, `.rst`, `.pdf`) or a pack (`.vincpack`, `.json`) onto the window, or start from a single note. Or connect an assistant ([Works with](#works-with)) and let it write into the graph.
 
@@ -71,10 +71,10 @@ sha256sum --check --ignore-missing SHA256SUMS
 ## See it in action
 
 <p align="center">
-  <img alt="The Design token node opened in View: its card with Ask an assistant, and the Node detail pane with its kind, topic, links and the documents it appears in" src="docs/images/node-detail.png" width="900">
+  <img alt="The Design token node opened on the map: its card with Details and source, Links and Ask an assistant, and the Node detail pane with its topic, links, direction, attached items and the document it appears in" src="docs/images/node-detail.png" width="900">
 </p>
 
-Every node can be handed to an assistant as an address. Open a node in View (here, **Design token** from the demo graph), and in its card choose **Ask an assistant**, **Copy prompt**, **Explain this concept**. You get one line to paste into any assistant connected to Vinc:
+Every node can be handed to an assistant as an address. Open a node on the map (here, **Design token** from the demo graph), and in its card choose **Ask an assistant**, **Copy prompt**, **Explain this concept**. You get one line to paste into any assistant connected to Vinc:
 
 ```text
 Explain this concept using only what is in my Vinc graph. …?space=personal#view/trace/concept%3Adesign-0/d1
@@ -107,42 +107,42 @@ From there the assistant can walk one hop at a time with `vinc_neighbors`, trace
 
 | Capability | What you get |
 |---|---|
-| **Documents first** | The first screen is a document home: every document, newest first, narrowed by topic or title, read and written in place. The sidebar holds Home, Agent and your topics with their documents, and folds to a strip of icons. |
-| **View, four viewpoints** | 3D, 2D, Timeline and Weave over the same graph, opened with the **Graph** button. It opens as time branches in 3D: each Topic grows one arm with its items left to right by date, and the other topics fill the space around the main one. You can switch to **by centre** in the view card. Nodes are glass, each topic wears its own jewel colour, and shape tells the kind. A time cursor limits View to what existed at a date, and Flow plays it forward. The Timeline takes a period: the last 7, 30 or 90 days, this year, or dates you pick. |
-| **Find and Ask** | Find looks up names and keywords (and ranks by meaning on the account graph). **Search inside documents**, under the Find results, reads the text of your documents and shows the passage that matched. Korean is indexed two characters at a time, so a word is found even with a particle attached. Ask answers *What is X* and *Sources for X* by quoting your documents. |
-| **Node detail** | For any node: its topic, links out and in, the documents behind it, and its properties. Edit properties in place as text, list, number, yes or no, or JSON. If the node changed after you started editing, Vinc does not save over it. |
-| **Add knowledge** | Drag in `.md`, `.txt`, `.rst` or `.pdf`, or start a new document or node where you are: **New document** and **Import files** on the document home, the tree, the palette, a shortcut or a right-click. Type `[[` to link a node, and in View hold Alt (Option on a Mac) and drag from one node to another to connect them. Import says where the files go (this device, your account or a team space) and which documents it adds, refreshes or leaves as they are. |
-| **Packs** | Shift-drag to select an area, or start from a node, and share it as a `.vincpack`. Records and decisions travel with it. Import a pack, or double-click one, and it joins your graph. |
-| **Agent roles** | Roles are nodes in your graph, listed under **Agent** by team. Press **+** above the list to make a new one; with no roles yet, the list offers **New Agent role**. A role's properties hold its mission and what it must never do, and **Work as this role** copies a prompt that hands the role to an assistant. An assistant can check its work against the role with `vinc_role_check`. |
-| **Spaces** | Switch between your personal graph and a team's shared graph in Settings, Account · storage. Every screen follows the space you pick. |
-| **MCP, CLI and API** | Web assistants reach the graph in your account at `https://mcp.vincs.io/mcp`. Settings, AI connections shows it with a **Copy address** button. An assistant on this computer sees what the app shows: the account graph in account mode, this computer's graph in local mode. The `vinc` command, REST v1 and Python packages for LangGraph and Microsoft Agent Framework reach the same graph ([CLI](https://vincs.io/docs/cli/), [API](https://vincs.io/docs/api/), [Frameworks](https://vincs.io/docs/frameworks/)). |
-| **Local mode** | Settings, Account · storage, **Keep the graph on this device**: the graph lives in a folder you pick and your account holds no copy. |
+| **Documents first** | The first screen is a document home: every document, newest first, read and written in place. One toolbar holds topic, title search and sort, and the topic opens a tree you can search at any level. Documents and the graph share one sidebar: Home and Agent on top, search below them, then the topic tree in topic colours. A topic row narrows the document list or moves the map to that topic. Documents insert tables, math and code blocks, and table cells are edited in place. |
+| **The map is a compass** | **Graph** opens one 2D compass at your own top-level topic. The centre is where you are, 12 o'clock is where you came from, 9 is meaning relations, 3 is subtopics and bridges, and 6 is a trunk to the decisions, records and events attached. Click a node to open it where it stands, and click the centre again for its details. Press P to pin a node: it stays in place with its topic chain drawn. **Whole graph** unfolds every topic with every node at once, and **Time** and **Legend** sit beside the Graph title; Time narrows the map to the last 7 or 30 days. |
+| **Search and Ask** | Search sits at the top of the sidebar on every screen (Ctrl or Cmd K). It looks up names and keywords (and ranks by meaning on the account graph), and on the map it narrows the compass. **Search inside documents**, under the results, reads the text of your documents and shows the passage that matched. Korean is indexed two characters at a time, so a word is found even with a particle attached. Switch the box to Ask and it answers *What is X* and *Sources for X* by quoting your documents. |
+| **Node detail** | For any node: its topic, links out and in, what is attached to it, the documents behind it, and its properties. Edit properties in place as text, list, number, yes or no, or JSON. If the node changed after you started editing, Vinc does not save over it. |
+| **Add knowledge** | Drag in `.md`, `.txt`, `.rst` or `.pdf`, or start a new document or node where you are: **New document** and **Import files** on the document home, the tree, the palette, a shortcut or a right-click. Type `[[` to link a node, or choose **Connect** in a node's card to link it to another. Import says where the files go (this device, your account or a team space) and which documents it adds, refreshes or leaves as they are. |
+| **Packs** | Choose **Share** on a node and send that part of the graph as a `.vincpack`. The sheet shows what will go and lets you leave items out; one share takes at most 2,000 nodes. Records and decisions travel with it. Import a pack, or double-click one, and it joins your graph. |
+| **Agents** | **Agent** in the sidebar opens a map of your agents and their procedures, one colour per agent. Pick a dot to edit it in the side panel, gates included; **Add agent** and **Add procedure** sit under the title, and policies sit in cards under the map. A role says what it outputs, when it may act without asking, its budget and which tools it may use, and its page shows the evaluation cards from its runs. Roles export as skills and files for every assistant host. **Work as this role** copies a prompt that hands the role to an assistant, and an assistant can check its work against the role with `vinc_role_check`. A run that reaches an action only a person may take ends blocked and names the action, so your assistant reports it to you. |
+| **Spaces** | The current space shows in the view header, and you switch between your personal graph and a team's shared graph from there. Settings, Spaces lists the spaces you work in. Every screen follows the space you pick. |
+| **MCP, CLI and API** | Web assistants reach the graph in your account at `https://mcp.vincs.io/mcp`. Settings, Web assistants shows it with a **Copy address** button. An assistant on this computer sees what the app shows: the account graph in account mode, this computer's graph in local mode. The `vinc` command, REST v1 and Python packages for LangGraph and Microsoft Agent Framework reach the same graph ([CLI](https://vincs.io/docs/cli/), [API](https://vincs.io/docs/api/), [Frameworks](https://vincs.io/docs/frameworks/)). |
+| **Storage and local mode** | Settings, Storage shows where your graph lives. **Keep it on this device** puts the graph in a folder you pick, and your account holds no copy. Storage can also check and connect a Neo4j database of your own; `vinc storage status`, `connect` and `move` do the same from the CLI. |
 | **Updates** | The app checks for a new release and offers to install it. The update's signature is checked before anything is installed. |
 
 <table>
   <tr>
-    <td width="50%"><img alt="The demo graph in 3D time branches" src="docs/images/view-3d.png"></td>
-    <td width="50%"><img alt="The demo graph in 2D time branches" src="docs/images/view-2d.png"></td>
+    <td width="50%"><img alt="The compass at the top-level topic vinc, with its five subtopics agent, node, dev, design and mcp to the right and their node counts" src="docs/images/view-top.png"></td>
+    <td width="50%"><img alt="The compass at the design topic: vinc above it, its concepts fanned to the left, and a trunk below to its decisions, records and events" src="docs/images/view-topic.png"></td>
   </tr>
   <tr>
-    <td><em>3D: each topic grows an arm along time, earlier on the left, and the other topics fill the space around it.</em></td>
-    <td><em>2D: the same branches, flat. Each topic box reads left to right by date.</em></td>
+    <td><em>The map opens at your top-level topic. The centre is where you are, and the subtopics sit at 3 o'clock.</em></td>
+    <td><em>One topic in the centre: where you came from at 12, its concepts at 9, and a trunk at 6 to the decisions, records and events attached.</em></td>
   </tr>
   <tr>
-    <td><img alt="The demo graph in Weave" src="docs/images/view-weave.png"></td>
-    <td><img alt="Search with the query token and its results" src="docs/images/find-results.png"></td>
+    <td><img alt="Whole graph: every topic of the demo graph unfolded with its nodes, each in its own colour" src="docs/images/view-whole.png"></td>
+    <td><img alt="The sidebar search with the query token and four results with their topics, above All documents and Search inside documents" src="docs/images/find-results.png"></td>
   </tr>
   <tr>
-    <td><em>Weave: every node on the ring by topic, and only the links cross the middle.</em></td>
-    <td><em>Find: type <code>token</code> in the search pill and the matching nodes and documents come back with their topic. ≈ marks a match by meaning.</em></td>
+    <td><em>Whole graph: every topic with every node at once. Press it again to return to the layer you were in.</em></td>
+    <td><em>Search: type <code>token</code> at the top of the sidebar and the matching nodes come back with their topic. <strong>Search inside documents</strong> reads the text of your documents.</em></td>
   </tr>
   <tr>
-    <td><img alt="The Agent list with CI Gate Runner open" src="docs/images/agent-list.png"></td>
-    <td><img alt="A document open on the document home, with its topic and node beside it" src="docs/images/doc-read.png"></td>
+    <td><img alt="The agent map: Maker and Checker with their procedures, Maker open in the side panel, and Policies under the map" src="docs/images/agent-map.png"></td>
+    <td><img alt="The document Design tokens, from file to screen open in place, with Insert, its contents, the concepts in it, its topic and its node beside it" src="docs/images/doc-read.png"></td>
   </tr>
   <tr>
-    <td><em>Agent: roles grouped by team, with who each one works from and hands off to. CI Gate Runner carries its mission, team and tier as properties.</em></td>
-    <td><em>A document opens in place, with its topic and the node it became beside it. <strong>Show in graph</strong> jumps to that node.</em></td>
+    <td><em>Agent: a map of Maker, Checker and their procedures, one colour per agent. Pick a dot to edit it in the side panel; policies sit under the map.</em></td>
+    <td><em>A document opens in place, with its contents, the concepts in it, its topic and the node it became beside it. <strong>Insert</strong> adds tables, math and code, and <strong>Show in graph</strong> jumps to the node.</em></td>
   </tr>
 </table>
 
@@ -178,7 +178,7 @@ Step by step, per host: [vincs.io/docs/mcp](https://vincs.io/docs/mcp/).
 
 **Does it work offline?** The first sign-in needs a network. In the default account mode the app needs to reach your account. Local mode reads the graph from a folder on this device.
 
-**A graph I made before signing in is not on the web.** It stayed on this device. To move it into your account, turn off local mode in Settings, Account · storage, and choose **Move to my account and turn off**. Vinc asks before it moves anything.
+**A graph I made before signing in is not on the web.** It stayed on this device. To move it into your account, turn off local mode in Settings, Storage, and choose **Move to my account and turn off**. Vinc asks before it moves anything.
 
 **A large file will not import.** In account mode a single import has a size limit, and a PDF reaches it sooner than text. Vinc says so when a file is over it: split the file.
 
